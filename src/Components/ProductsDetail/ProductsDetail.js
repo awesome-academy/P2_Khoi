@@ -7,8 +7,13 @@ import ProductsDetailRecentView from './ProductsDetailRecentView';
 import ProductsDetailHotSale from './ProductsDetailHotSale';
 import Button from './Button';
 import Banner from './Banner';
+import { connect } from 'react-redux';
+import { mapStateToProps, mapDispatchToProps } from '../../Store/actions/HomeStore';
 
-export default class ProductsDetail extends Component {
+class ProductsDetail extends Component {
+	componentDidMount() {
+		this.props.getHomeData();
+	}
 	render() {
 		let temp = JSON.parse(localStorage.getItem('item-detail'));
         if (temp) {
@@ -67,3 +72,5 @@ export default class ProductsDetail extends Component {
         }
 	}
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductsDetail)

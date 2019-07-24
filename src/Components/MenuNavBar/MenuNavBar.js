@@ -8,6 +8,7 @@ import Blog from '../Blog/Blog';
 import Product from '../Product/Product';
 import Signin from '../Signin/Signin';
 import Signup from '../Signup/Signup';
+import Page404 from '../Page404/Page404';
 import ProductsDetail from '../ProductsDetail/ProductsDetail';
 
 export default class MenuNavBar extends Component {
@@ -47,6 +48,8 @@ export default class MenuNavBar extends Component {
 					<Route path="/sign-in" component={Signin} />
 					<Route path="/sign-up" component={Signup} />
 					<Route path="/productsdetail" component={ProductsDetail} />
+
+					<Route component={Page404} />
 				</Switch>
 			</BrowserRouter>
 		);
