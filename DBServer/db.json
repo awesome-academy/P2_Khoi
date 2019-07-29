@@ -11,7 +11,8 @@
             "descriptionList": "Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khí thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "new hot",
             "sell"           : 24,
-            "rating"         : 5
+            "rating"         : 5,
+            "count"          : 0
         },
         {
             "id"             : "2",
@@ -24,7 +25,8 @@
             "descriptionList": "Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khí thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "new",
             "sell"           : 5,
-            "rating"         : 4
+            "rating"         : 4,
+            "count"          : 0
         },
         {
             "id"             : "3",
@@ -37,7 +39,8 @@
             "descriptionList": "Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khí thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "hot",
             "sell"           : 1,
-            "rating"         : 5
+            "rating"         : 5,
+            "count"          : 0
         },
         {
             "id"             : "4",
@@ -50,7 +53,8 @@
             "descriptionList": "Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khí thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "new special",
             "sell"           : 14,
-            "rating"         : 4
+            "rating"         : 4,
+            "count"          : 0
         },
         {
             "id"             : "5",
@@ -63,7 +67,8 @@
             "descriptionList": "Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khí thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "hot",
             "sell"           : 0,
-            "rating"         : 5
+            "rating"         : 5,
+            "count"          : 0
         },
         {
             "id"             : "6",
@@ -76,7 +81,8 @@
             "descriptionList": "Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khí thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "new",
             "sell"           : 57,
-            "rating"         : 4
+            "rating"         : 4,
+            "count"          : 0
         },
         {
             "id"             : "7",
@@ -89,7 +95,8 @@
             "descriptionList": "Dài quá nên viết đại cho vui đó mà. Khi mà nhà cung cấp cho thấy cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "hot",
             "sell"           : 24,
-            "rating"         : 5
+            "rating"         : 5,
+            "count"          : 0
         },
         {
             "id"             : "8",
@@ -102,7 +109,8 @@
             "descriptionList": "Dài quá nên viết đại cho vui đó mà. Khi mà nhà cung cấp cho thấy cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "hot",
             "sell"           : 1,
-            "rating"         : 5
+            "rating"         : 5,
+            "count"          : 0
         },
         {
             "id"             : "9",
@@ -115,7 +123,8 @@
             "descriptionList": "Dài quá nên viết đại cho vui đó mà. Khi mà nhà cung cấp cho thấy cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "new",
             "sell"           : 3,
-            "rating"         : 4
+            "rating"         : 4,
+            "count"          : 0
         },
         {
             "id"             : "10",
@@ -128,7 +137,8 @@
             "descriptionList": "Dài quá nên viết đại cho vui đó mà. Khi mà nhà cung cấp cho thấy cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "new",
             "sell"           : 31,
-            "rating"         : 4
+            "rating"         : 4,
+            "count"          : 0
         },
         {
             "id"             : "11",
@@ -141,7 +151,8 @@
             "descriptionList": "Dài quá nên viết đại cho vui đó mà. Khi mà nhà cung cấp cho thấy cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "special",
             "sell"           : 0,
-            "rating"         : 4
+            "rating"         : 4,
+            "count"          : 0
         },
         {
             "id"             : "12",
@@ -154,7 +165,8 @@
             "descriptionList": "Dài quá nên viết đại cho vui đó mà. Khi mà nhà cung cấp cho thấy cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà",
             "type"           : "special",
             "sell"           : 62,
-            "rating"         : 4
+            "rating"         : 4,
+            "count"          : 0
         }
     ]
 }

@@ -19,3 +19,7 @@ export function fetchSuccess(res) {
 export function fetchError(err) {
 	return { type: 'HOME_ERROR', data: err}
 }
+
+export function addItemSelected(item) {
+    return { type: "ADD_CART", item }
+}

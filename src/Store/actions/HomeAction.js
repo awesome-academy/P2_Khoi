@@ -12,6 +12,20 @@ export function GET_HOMEDATA(){
 	}
 }
 
+export function EDIT_HOMEDATA(id, data){
+	console.log(data)
+	return (dispatch) => {
+		return axios.put('https://5d230e064e05c600146efa7e.mockapi.io/mandala/products/'+id, data
+			)
+		.then(res => {
+        	dispatch(fetchSuccess(res.data));
+     	})
+     	.catch(err => {
+     		dispatch(fetchError(err));
+		 })
+	}
+}
+
 export function fetchSuccess(res) {
 	return { type: 'HOME_OK', data: res}
 }

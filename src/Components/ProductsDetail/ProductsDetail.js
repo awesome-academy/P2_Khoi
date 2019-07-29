@@ -5,6 +5,7 @@ import ProductsDescription from './ProductsDescription';
 import ProductsDetailTag from './ProductsDetailTag';
 import ProductsDetailRecentView from './ProductsDetailRecentView';
 import ProductsDetailHotSale from './ProductsDetailHotSale';
+import ProductsSocial from './ProductsSocial';
 import Button from './Button';
 import Banner from './Banner';
 import { connect } from 'react-redux';
@@ -16,6 +17,7 @@ class ProductsDetail extends Component {
 	}
 	render() {
 		let temp = JSON.parse(localStorage.getItem('item-detail'));
+		
         if (temp) {
 			return (
 				<article className="container pt-5" id="productsdetail">
@@ -45,17 +47,7 @@ class ProductsDetail extends Component {
 								<Button />
 							</div>
 							<p className="inline">Shipping & <a href="/" >Returns</a></p>
-							<div className="inline detail-item__btnall">
-								<button className="btnface py-0"><i className="fab fa-facebook-square"> Like</i></button><span className="arrow-box">0</span>
-								<button className="btntwitter py-0"><i className="fab fa-twitter font-weight-bold">
-										<p className="d-inline font-weight-bold py-0 m-0"> Tweet</p></i></button><span className="arrow-box">0</span>
-								<button className="btngplus py-0"><i className="fab fa-google-plus font-weight-bold"> +1</i></button><span className="arrow-box">0</span>
-								<div>
-									<button className="pr-1 pl-1 btnlinkedin color--white border-right"><i className="fab fa-linkedin font-weight-bold"></i></button>
-									<button className="m-0 btnlinkedin border-none"><a className="font-weight-bold color--white" href="/"> Share</a></button>
-								</div>
-								<button className="btnpinterest py-0"><i className="fab fa-pinterest-p font-weight-bold"> in it</i></button>
-							</div>
+							<ProductsSocial />
 						</aside>
 					</div>
 					<div className="row mt-4">

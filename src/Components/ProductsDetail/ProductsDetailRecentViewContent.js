@@ -9,10 +9,11 @@ export default class ProductsDetailRecentViewContent extends Component {
 			price,
 			onShowDetail
 		} = this.props;
+		console.log(this.props)
 		return (
 			<>
 				<div className="row">
-					<a href={'/productsdetail?='+id} className="col-lg-4 p-0 text-center align-self-center">
+					<a onClick={onShowDetail} href={'/productsdetail?='+id} className="col-lg-4 p-0 text-center align-self-center">
 						<img className="products__detail__hotsale__image" src={"/lib/imgs/"+image} alt={image}/>
 					</a>
 					<div className="col-lg-8 p-0 pt-2">

@@ -7,7 +7,7 @@ export default class InfoItem4 extends Component {
 				id: 6,
 				img : '/lib/imgs/home6.png',
 				class1 : "info6",
-				class2 : " pt-2 info6__fixsize",
+				class2 : "pt-2 info6__fixsize",
 			}
 		];
 

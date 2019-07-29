@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import ItemList from './ItemList';
 import { connect } from "react-redux";
+import { addItemSelected } from '../../Store/actions/ProductsAction';
 
 class MenuList extends Component {
 	constructor(props){
 		super(props);
-		this.state = {
-			showProduct: []
-		};
 		this.onShowDetail = this.onShowDetail.bind(this)
+		this.onAddCart = this.onAddCart.bind(this)
 	}
 
 	onShowDetail(item){
@@ -23,6 +22,28 @@ class MenuList extends Component {
 
             localStorage.setItem('item-detail', JSON.stringify(arrItemRecently));
             window.location.href = '/productsdetail?=';
+		}
+	}
+
+	onAddCart(item) {
+		return (event) => {
+			const { productSelected, add } = this.props;
+			let countObject = productSelected;
+
+			if (!countObject) {
+				countObject = [];
+				countObject.push({...item, count: 1})
+			}
+			else {
+				let idx = countObject.findIndex(obj => obj.id === item.id);
+				if (idx > -1)
+					countObject[idx].count += 1;
+				else	
+					countObject.push({...item, count: 1})
+			}
+
+			localStorage.setItem('id-item--cart', JSON.stringify(countObject));
+			add(countObject);
 		}
 	}
 
@@ -100,7 +121,7 @@ class MenuList extends Component {
 																		priceSale={Item2.priceSale}
 																		productName={Item2.productName}
 																		onShowDetail={this.onShowDetail(Item2)}
-	
+																		onAddCart={this.onAddCart(Item2)}
 									/>
 								)
 							}
@@ -115,9 +136,17 @@ class MenuList extends Component {
 
 const mapStateToProps = state => {
 	return {
-		getHomeData: state.homereducer
+		getHomeData: state.homereducer,
+		productSelected: state.productsreducer
 	}
-
 }
 
-export default connect(mapStateToProps, null)(MenuList); 
+function mapDispatchToProps(dispatch) {
+    return {
+		add: (item) => {
+			dispatch(addItemSelected(item));
+		}
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MenuList); 

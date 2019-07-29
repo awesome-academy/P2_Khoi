@@ -4,10 +4,6 @@ import ProductsDetailRecentViewContent from './ProductsDetailRecentViewContent';
 export default class ProductsDetailRecentView extends Component {
 	constructor(props){
 		super(props);
-
-		this.state = {
-			showProduct: []
-		};
 		this.onShowDetail = this.onShowDetail.bind(this)
 	}
 
@@ -25,7 +21,7 @@ export default class ProductsDetailRecentView extends Component {
 				arrItemRecently.push(item);
 				localStorage.setItem('item-detail', JSON.stringify(arrItemRecently));
 			}
-				
+
 			window.location.href = '/productsdetail?=';
 		}
 	}
