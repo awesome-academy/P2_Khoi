@@ -167,6 +167,64 @@
             "sell"           : 62,
             "rating"         : 4,
             "count"          : 0
+            }
+    ],
+    "users"   : [
+        {
+            "id"             : "1",
+            "email"          : "khoi@mail.com",
+            "password"       : "123456",
+            "firstname"      : "Josue",
+            "lastname"       : "Legros",
+            "role"           : 1
+        },
+        {
+            "id"             : "2",
+            "email"          : "khoi2@mail.com",
+            "password"       : "123456",
+            "firstname"      : "Carrie",
+            "lastname"       : "Rosenbaum",
+            "role"           : 2
+        },
+        {
+            "id"             : "3",
+            "email"          : "khoi3@mail.com",
+            "password"       : "123456",
+            "firstname"      : "Arnulfo",
+            "lastname"       : "Watsica",
+            "role"           : 2
+        },
+        {
+            "id"             : "4",
+            "email"          : "khoi4@mail.com",
+            "password"       : "123456",
+            "firstname"      : "Travon",
+            "lastname"       : "Ritchie",
+            "role"           : 2
+        },
+        {
+            "id"             : "5",
+            "email"          : "khoi5@mail.com",
+            "password"       : "123456",
+            "firstname"      : "Dolores",
+            "lastname"       : "Grimes",
+            "role"           : 2
+        },
+        {
+            "id"             : "6",
+            "email"          : "khoi6@mail.com",
+            "password"       : "123456",
+            "firstname"      : "Rosendo",
+            "lastname"       : "Kuhn",
+            "role"           : 2
+        },
+        {
+            "id"             : "7",
+            "email"          : "khoi7@mail.com",
+            "password"       : "123456",
+            "firstname"      : "Kaitlin",
+            "lastname"       : "Gottlieb",
+            "role"           : 2
         }
     ]
 }

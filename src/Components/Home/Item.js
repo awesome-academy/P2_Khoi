@@ -3,14 +3,10 @@ import ItemItemHot from './ItemItemHot';
 import ItemItemNew from './ItemItemNew';
 import ItemItemSpecial from './ItemItemSpecial';
 import { Route, Link, Switch } from "react-router-dom";
-import { connect } from "react-redux";
-import { mapStateToProps, mapDispatchToProps } from '../../Store/actions/HomeStore';
+
 
 
 class Item extends Component {
-	componentDidMount() {
-		this.props.getHomeData();
-	}
 	render() {
 		var Item__list = [
 			{
@@ -54,4 +50,4 @@ class Item extends Component {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Item);
+export default (Item);

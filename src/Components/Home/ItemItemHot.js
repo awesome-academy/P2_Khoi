@@ -10,7 +10,6 @@ class ItemItemHot extends Component {
 		this.state = {
 			count: 0
 		}
-
 		this.onShowDetail = this.onShowDetail.bind(this);
 		this.onAddCart = this.onAddCart.bind(this)
 	}

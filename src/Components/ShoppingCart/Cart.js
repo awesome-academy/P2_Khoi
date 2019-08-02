@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import CartItem from './CartItem';
+import CartTotal from './CartTotal';
 import { addItemSelected } from '../../Store/actions/ProductsAction';
 
 class Cart extends Component {
@@ -50,19 +51,15 @@ class Cart extends Component {
 	// }
 
 	render() {
-		let Item__Cart = this.props.productSelected;
 		let temp = JSON.parse(localStorage.getItem('id-item--cart'));
 		let total = 0;
-		if (Item__Cart.count > 0) {
-			for (var item of Item__Cart) {
-				if (item){
-					temp.push(item);
+		if (temp !== null && temp !== undefined && temp !== '')
+			{
+				for ( var item__cart of temp ) {
+					total += (item__cart.count * item__cart.price);
 				}
 			}
-		}
-		for ( var item__cart of temp ) {
-			total += (item__cart.count * item__cart.price);
-		}
+		else temp = []
 
 		return (
 			<>
@@ -73,13 +70,13 @@ class Cart extends Component {
 														count={item.count}
 														name={item.productName}
 														price={item.price}
-														total={total}
 														onRemoveItem={this.onRemoveItem(item)}
 														onShowDetail={this.onShowDetail(item)}
 														
 														/>
 							)
 				}
+				<CartTotal total={total} />
 			</>
 		);
 	}

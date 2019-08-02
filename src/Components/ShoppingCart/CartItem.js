@@ -21,6 +21,6 @@ export default class CartItem extends Component {
 					<td className="cartItem__Table--space col-lg-1"><button onClick={onRemoveItem} data--id="2" className="btn item_icon--remove"><i className="fas fa-trash"></i></button></td>
 				</tr>
 			</>
-		);
+		)
 	}
 }
