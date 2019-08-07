@@ -1,0 +1,18 @@
+#MenuNavBar{
+	position: fixed;
+	z-index: 1;
+	nav{
+		ul {
+			li {
+				a{
+					color: black;
+					font-weight: bold;
+					margin-top: 2em;
+				}
+			}
+		}
+	}
+	.logo{
+		height: 60%;
+	}
+}
