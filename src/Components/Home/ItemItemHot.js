@@ -16,15 +16,19 @@ class ItemItemHot extends Component {
 	onShowDetail(item){
 		return event => {
 			let arrItemRecently = JSON.parse(localStorage.getItem('item-detail'));
-            if (!arrItemRecently) arrItemRecently = [];
+			if (!arrItemRecently) arrItemRecently = [];
 
-            if (arrItemRecently.length > 3) {
-                arrItemRecently.shift();
-            }
-            arrItemRecently.push(item);
+			if (arrItemRecently.length > 2) {
+				arrItemRecently.shift();
+			}
 
-            localStorage.setItem('item-detail', JSON.stringify(arrItemRecently));
-            window.location.href = '/productsdetail?=';
+			let findItem = arrItemRecently.findIndex(i => i.id === item.id);
+			if (findItem < 0) {
+				arrItemRecently.push(item);
+				localStorage.setItem('item-detail', JSON.stringify(arrItemRecently));
+			}
+
+			window.location.href = '/productsdetail?=';
 		}
 	}
 
@@ -41,7 +45,6 @@ class ItemItemHot extends Component {
 			}
 		}
 		
-
 		return (
 			<ul className="list-unstyled m-4 p-0 row">
 				{
@@ -57,7 +60,6 @@ class ItemItemHot extends Component {
 						/>
 					)
 				}
-
 			</ul>
 		);
 	}

@@ -6,8 +6,7 @@ export const HOME_STATE = {
     description: "",
     image: "",
     view: "",
-    sell: "",
-    homeShow: 4
+    sell: ""
 }
 
 export default function homereducer(state = [], action) {

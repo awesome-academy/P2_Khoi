@@ -1,28 +1,55 @@
 import React, { Component } from 'react';
+import ProductsDetailRecentViewContent from './ProductsDetailRecentViewContent';
 
 export default class ProductsDetailRecentView extends Component {
+	constructor(props){
+		super(props);
+
+		this.state = {
+			showProduct: []
+		};
+		this.onShowDetail = this.onShowDetail.bind(this)
+	}
+
+	onShowDetail(item){
+		return event => {
+			let arrItemRecently = JSON.parse(localStorage.getItem('item-detail'));
+			if (!arrItemRecently) arrItemRecently = [];
+
+			if (arrItemRecently.length > 2) {
+				arrItemRecently.shift();
+			}
+
+			let findItem = arrItemRecently.findIndex(i => i.id === item.id);
+			if (findItem < 0) {
+				arrItemRecently.push(item);
+				localStorage.setItem('item-detail', JSON.stringify(arrItemRecently));
+			}
+				
+			window.location.href = '/productsdetail?=';
+		}
+	}
+
 	render() {
+		let temp = JSON.parse(localStorage.getItem('item-detail'));
+		temp.reverse();
+        if (!temp) temp = [];
 		return (
 			<>
 				<p className="font-weight-bold pl-0 m-0">SẢN PHẨM MUA NHIỀU</p>
 				<hr/>
-				<div className="row">
-					<div className="col-lg-4 p-0 topspace-20">
-						<img src="/lib/imgs/vong5.png" alt="1"/>
-					</div>
-					<div className="col-lg-8 p-0 pt-2 topspace-20">
-						<p className="bold">Mỹ phẩm châu Âu</p>
-						<pre>
-							<i className="fa fa-heart"></i>
-							<i className="fa fa-heart"></i>
-							<i className="fa fa-heart"></i>
-							<i className="fa fa-heart"></i>
-							<i className="fa fa-heart"></i>(4 lượt mua)
-						</pre>
-						<p className="bold">355.000đ</p>
-					</div>
-				<hr className="hr--dotted" />
-				</div>
+				{
+					temp.map((item,index) => 	<ProductsDetailRecentViewContent	key={item.id}
+																					id={item.id}
+																					name={item.name}
+																					image={item.image}
+																					description={item.description}
+																					price={item.price}
+																					priceSale={item.priceSale}
+																					onShowDetail={this.onShowDetail(item)}
+												/>
+					)
+				}
 			</>
 		);
 	}
