@@ -1,15 +1,3 @@
-export const HOME_STATE = {
-    id: 1,
-    productName: "",
-    price: 0,
-    priceSale: 0,
-    description: "",
-    image: "",
-    view: "",
-    sell: "",
-    homeShow: 4
-}
-
 export default function homereducer(state = [], action) {
     switch (action.type) {
         case 'HOME_OK':

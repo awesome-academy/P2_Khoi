@@ -15,4 +15,24 @@
 	.logo{
 		height: 60%;
 	}
+	.dropdown{
+		.dropdown-cart:hover{
+			color: #789629;
+		}
+		.dropdown-cart{
+			cursor: pointer;
+		}
+	}
+	.dropdown-cart-table{
+		position: absolute;
+		width: 15em;
+		height: auto;
+		z-index: 1;
+		background-color: white;
+		border: 1px solid #789629;
+	}
+	.menu__image{
+		height: 4em;
+		max-width: 100%;
+	}
 }

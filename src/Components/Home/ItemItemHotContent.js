@@ -8,10 +8,11 @@ export default class ItemItemHotContent extends Component {
 			productName,
 			image,
 			name,
-            description,
-            price,
-            priceSale,
-            onShowDetail } = this.props;
+			description,
+			price,
+			priceSale,
+			onShowDetail,
+			onAddCart } = this.props;
 		return (
 			<li key={id} className={"mt-4 mr-0 ml-0 p-0 d-none d-lg-block text-center triggeritem col-12 col-md-6 col-lg-2 "}>
 				<a href={"/productsdetail?="+id}>
@@ -25,7 +26,7 @@ export default class ItemItemHotContent extends Component {
 				<p className="m-0 p-0 d-inline">{price}.000<sup>đ</sup></p>
 				<p className="m-0 p-0 d-inline">{priceSale}.000<sup>đ</sup></p>
 				<div className="d-block">
-					<Button />
+					<Button onAddCart={onAddCart}/>
 				</div>
 			</li>
 		);
