@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import MenuNavBar from './Components/MenuNavBar/MenuNavBar';
 import Footer from './Components/Footer/Footer';
+import { mapStateToProps, mapDispatchToProps } from './Store/actions/HomeStore';
+import { connect } from "react-redux";
 
-export default class App extends Component {
+class App extends Component {
+	componentDidMount() {
+		this.props.getHomeData();
+		this.props.getUserData();
+	}
+
 	render() {
 		return (
 			<div>
@@ -11,5 +18,7 @@ export default class App extends Component {
 				<Footer />
 			</div>
 		)
-  }
+	}
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

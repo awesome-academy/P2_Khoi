@@ -4,11 +4,11 @@ export default class ProductsDetailTagInfo extends Component {
     render() {
         const { imgProduct } = this.props;
         return (
-            <div className="tab-item--sub">
-                <div className="img-thumbnail mb-5 mb-md-0 w-100">
+            <div>
+                <div className="mb-5 mb-md-0 w-100">
                     <img className="img-fluid"
                          src={"/lib/imgs/"+imgProduct} alt={imgProduct} /></div>
-                <div className="tab_item--info">
+                <div>
                     <h3 className="text-uppercase mb-4 title">The mark of legend</h3>
                     <p>
                         Tự hào được ghi là năm mà Tyffany &amp; Co là thành lập, bộ

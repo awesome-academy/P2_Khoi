@@ -1,9 +1,9 @@
-export default function homereducer(state = [], action) {
+export default function userreducer(state = [], action) {
 	switch (action.type) {
-		case 'HOME_OK':
+		case 'USER_OK':
 			state = [...action.data];
 			return state;
-		case 'HOME_ERROR':
+		case 'USER_ERROR':
 			state = [...action.data];
 			return state;
 		default:

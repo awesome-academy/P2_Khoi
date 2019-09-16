@@ -17,7 +17,7 @@ export default class Slide extends Component {
 			            <i className="fa fa-square text-secondary">&nbsp;</i>
 			            <i className="fa fa-square" />
 					</div>
-					<img alt="flower.png" className="fl_right home__slide--3 col-sm-4 col-md-4 col-lg-4" src="/lib/imgs/Home11.png" />
+					<img alt="flower.png" className="fl_right home__slide--3 col-sm-4 col-md-4 col-lg-4" src="/lib/imgs/home11.png" />
 		        </div>
 			</div>
 		);
